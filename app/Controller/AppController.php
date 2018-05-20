@@ -55,7 +55,7 @@ class AppController extends Controller {
         $delete = array(
             'div' => false,
             'title' => 'Eliminar',
-            'class' => 'btn btn-danger ti-trash',
+            'class' => 'btn btn-danger ti-trash pull-right m-l-5',
             'confirm' => 'Está seguro que desea eliminar?',
         );
         $edit = array(
