@@ -24,19 +24,19 @@
                         <?php echo $this->Form->end(); ?>
                     </div>
                 </div>
-                <div class="row">
+<!--                <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
                         <div class="social">
                             <a href="javascript:void(0)" class="btn  btn-facebook" data-toggle="tooltip" title="Login with Facebook"> <i aria-hidden="true" class="fa fa-facebook"></i> </a>
                             <a href="javascript:void(0)" class="btn btn-googleplus" data-toggle="tooltip" title="Login with Google"> <i aria-hidden="true" class="fa fa-google-plus"></i> </a>
                         </div>
                     </div>
-                </div>
-                <div class="form-group m-b-0">
+                </div>-->
+<!--                <div class="form-group m-b-0">
                     <div class="col-sm-12 text-center">
-                        <p>no te registraste? <a href="<?php echo $this->Html->url(['controller' => 'users', 'action' => 'registrar']) ?>" class="text-info m-l-5"><b>Crear Cuenta Gratis</b></a></p>
+                        <p>no te registraste? <a href="<?php //echo $this->Html->url(['controller' => 'users', 'action' => 'registrar']) ?>" class="text-info m-l-5"><b>Crear Cuenta Gratis</b></a></p>
                     </div>
-                </div>
+                </div>-->
         </form>
         <form class="form-horizontal" id="recoverform" action="index.html">
             <div class="form-group ">
