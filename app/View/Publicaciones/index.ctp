@@ -1,3 +1,5 @@
+<?php // debug($publicaciones);die;  ?>
+
 <div class="row">
     <div class="col-lg-6 col-sm-12">
         <div class="card">

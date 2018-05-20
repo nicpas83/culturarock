@@ -28,9 +28,10 @@ class PublicacionesController extends AppController {
 
 
         if ($this->request->is('post')) {
-//            debug($this->request->data);
+            
+//            debug($id);
 //            die;
-            $this->request->data['Publicacion']['user_id'] = $this->Auth->user('id');
+            $this->request->data['Publicacion']['id'] = $id;
             if ($this->Publicacion->saveAll($this->request->data)) {
                 $this->Flash->success('La Publicación fue creada con éxio.');
                 return $this->redirect(array('controller' => 'pages', 'action' => 'display'));
