@@ -16,7 +16,28 @@ class PublicacionesController extends AppController {
     }
 
     public function edit($id = null) {
-        
+
+        $this->set('categorias', [
+            'Relatos' => 'Relatos',
+            'Curiosidades' => 'Curiosidades',
+            'Canciones' => 'Canciones',
+            'Albumes' => 'Albumes',
+        ]);
+
+        $this->set('data', $this->Publicacion->findById($id)['Publicacion']);
+
+
+        if ($this->request->is('post')) {
+//            debug($this->request->data);
+//            die;
+            $this->request->data['Publicacion']['user_id'] = $this->Auth->user('id');
+            if ($this->Publicacion->saveAll($this->request->data)) {
+                $this->Flash->success('La Publicación fue creada con éxio.');
+                return $this->redirect(array('controller' => 'pages', 'action' => 'display'));
+            } else {
+                $this->Flash->error(__('Error al grabar la Publicacion.'));
+            }
+        }
     }
 
     public function delete($id) {
@@ -31,7 +52,7 @@ class PublicacionesController extends AppController {
 
     public function add() {
 
-        $this->set('tipo_publicacion', [
+        $this->set('categorias', [
             'Relatos' => 'Relatos',
             'Curiosidades' => 'Curiosidades',
             'Canciones' => 'Canciones',

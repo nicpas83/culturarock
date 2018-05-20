@@ -33,14 +33,20 @@
                                 <th>Título</th>
                                 <th>Categoría</th>
                                 <th>Resúmen</th>
+                                <th>Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php foreach ($publicaciones as $publicacion) { ?>
                                 <tr>
-                                    <td><a href="<?php echo $this->Html->url(['controller' => 'publicaciones', 'action' => 'view',$publicacion['Publicacion']['id']]) ?>"><?php echo $publicacion['Publicacion']['titulo'] ?></a></td>
+                                    <td><?php echo $publicacion['Publicacion']['titulo'] ?></td>
                                     <td><?php echo $publicacion['Publicacion']['categoria'] ?></td>
                                     <td><?php echo $publicacion['Publicacion']['resumen'] ?></td>
+                                    <td>
+                                        <?php echo $this->Form->postLink('', array('action' => 'delete', $publicacion['Publicacion']['id']), $deleteBtn); ?>
+                                        <?php echo $this->Html->link('', array('action' => 'view', $publicacion['Publicacion']['id']), $viewBtn); ?>
+                                        <?php echo $this->Html->link('', array('action' => 'edit', $publicacion['Publicacion']['id']), $editBtn); ?>
+                                    </td>
                                 </tr>
                             <?php } ?>
                         </tbody>
