@@ -16,7 +16,7 @@ if (isset($data)) {
 <h4 class="card-title">Completar los campos.</h4>
 <div class="row">
     <?php echo $this->element('f_input', ['params' => ['name' => 'titulo', 'label' => 'Título o Referencia', 'lg' => '6', 'value' => $titulo, 'validate']]); ?>
-    <?php echo $this->element('f_select', ['params' => ['name' => 'tipo', 'label' => 'Categoría', 'lg' => '3', 'value' => $categoria, 'options' => $categorias]]); ?>
+    <?php echo $this->element('f_select', ['params' => ['name' => 'categoria', 'label' => 'Categoría', 'lg' => '3', 'value' => $categoria, 'options' => $categorias]]); ?>
     <?php echo $this->element('f_select', ['params' => ['name' => 'estado', 'label' => 'Estado', 'lg' => '3', 'value' => $estado, 'options' => [0 => 'Inactivo', 1 => 'Activo']]]); ?>
 </div>
 <div class="row">
